@@ -98,3 +98,9 @@ section {
         padding: 25px;
     }
 }
+.hero-title{
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+.btn{
+    border-radius: 10px;
+}
