@@ -18,3 +18,83 @@
 section {
     scroll-margin-top: 80px;
 }
+/* =========================
+   RESPONSIVE PARA CELULARES
+========================= */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* NAVBAR */
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar-brand img {
+        height: 35px;
+    }
+
+    /* TARJETAS */
+    .card {
+        margin-bottom: 20px;
+    }
+
+    /* TITULOS */
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* FORMULARIOS */
+    .form-control {
+        font-size: 16px;
+    }
+
+    /* BOTONES */
+    .btn-lg {
+        width: 100%;
+    }
+
+    /* MAPA */
+    iframe {
+        min-height: 300px;
+    }
+
+    /* CONTACTO */
+    #contacto .col-md-4 {
+        margin-bottom: 25px;
+    }
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+}
