@@ -120,3 +120,35 @@ section {
 .contacto-section p{
     color: #444;
 }
+.contacto-section{
+    background: linear-gradient(135deg, #003399, #0052cc);
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contacto-section h2{
+    color: white;
+}
+
+.contacto-section .card{
+    border-radius: 15px;
+}
+
+.contacto-section .card-body{
+    background: white;
+    border-radius: 15px;
+}
+
+.contacto-section .form-control{
+    border-radius: 10px;
+}
+
+.contacto-section iframe{
+    border-radius: 15px;
+}
+
+.contacto-section .btn-light{
+    color: #003399;
+    font-weight: bold;
+}
