@@ -7,14 +7,7 @@
     height: 90vh;
     
 }
-    .navbar-brand,
-    .navbar-brand:hover,
-    .nav-link,
-    .nav-link:hover,
-    .navbar-toggler {
-        color: white !important;
-    
-}
+
 
 .card {
     transition: transform 0.3s ease;
@@ -161,22 +154,38 @@ section {
     color: #003399;
     font-weight: bold;
 }
-    .navbar-brand,
-    .navbar-brand:hover,
-    .nav-link,
-    .nav-link:hover,
-    .navbar-toggler {
-        color: white !important;
-    
+  
+/* =========================
+   NAVBAR TEXTO BLANCO
+========================= */
+
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus{
+    color: #ffffff !important;
 }
+
+.navbar .nav-link,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active{
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
 .navbar-toggler{
-    border-color: rgba(255,255,255,0.5);
+    border-color: rgba(255,255,255,0.7);
 }
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
 .nav-link{
     font-weight: 500;
     transition: 0.3s;
 }
 
 .nav-link:hover{
-    opacity: 0.8;
+    transform: translateY(-1px);
 }
