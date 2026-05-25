@@ -104,3 +104,19 @@ section {
 .btn{
     border-radius: 10px;
 }
+
+.contacto-section{
+    background: linear-gradient(135deg, #003399, #0052cc);
+}
+
+.contacto-section .card{
+    border-radius: 15px;
+}
+
+.contacto-section h3{
+    font-size: 1.8rem;
+}
+
+.contacto-section p{
+    color: #444;
+}
