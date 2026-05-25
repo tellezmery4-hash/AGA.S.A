@@ -5,6 +5,13 @@
     background-size: cover;
     background-position: center;
     height: 90vh;
+    .navbar-brand,
+    .navbar-brand:hover,
+    .nav-link,
+    .nav-link:hover,
+    .navbar-toggler {
+        color: white !important;
+    
 }
 
 .card {
