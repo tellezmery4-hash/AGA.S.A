@@ -8,29 +8,13 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- AOS Animations -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <style>
-    
-    <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-    
-            <img src="logo.png"
-                alt="Logo AGA"
-                width="45"
-                class="me-2">
-
-                AGENCIA DE GESTION ADUANERA AGA S.A.
-
-            </a>
-        </div>
-        </nav>
     <!-- Bootstrap Icons -->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <style>
 
@@ -39,18 +23,27 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        .navbar{
+            padding: 15px 0;
+        }
+
         .section-title{
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: bold;
             color: #0d1b2a;
         }
 
         .accordion-item{
             border: none;
-            border-radius: 18px !important;
+            border-radius: 20px !important;
             overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+            margin-bottom: 22px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+        }
+
+        .accordion-item:hover{
+            transform: translateY(-3px);
         }
 
         .accordion-button{
@@ -70,22 +63,42 @@
             box-shadow: none;
         }
 
+        .accordion-collapse{
+            transition: all 0.4s ease;
+        }
+
         .accordion-body{
             background: white;
-            padding: 30px;
+            padding: 35px;
+            animation: fadeSmooth 0.5s ease;
+        }
+
+        @keyframes fadeSmooth{
+
+            from{
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+
         }
 
         .service-icon{
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             background: rgba(13,110,253,0.12);
-            border-radius: 14px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 18px;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             color: #0d6efd;
+            flex-shrink: 0;
         }
 
         .accordion-button:not(.collapsed) .service-icon{
@@ -102,21 +115,61 @@
 
         .content-box{
             background: #f8f9fa;
-            border-left: 4px solid #0d6efd;
-            padding: 20px;
-            border-radius: 12px;
+            border-left: 5px solid #0d6efd;
+            padding: 25px;
+            border-radius: 18px;
+        }
+
+        .service-img{
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 18px;
+            transition: 0.4s ease;
+        }
+
+        .service-img:hover{
+            transform: scale(1.02);
+        }
+
+        footer{
+            margin-top: 60px;
         }
 
     </style>
 
 </head>
+
 <body>
 
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+
+                <img src="logo.png"
+                    alt="Logo AGA"
+                    width="50"
+                    class="me-3">
+
+                AGENCIA DE GESTIÓN ADUANERA AGA S.A.
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- SECCIÓN -->
     <section class="py-5">
 
         <div class="container">
 
-            <div class="text-center mb-5">
+            <!-- TITULO -->
+            <div class="text-center mb-5" data-aos="fade-up">
+
                 <h1 class="section-title">
                     Servicios de Importación y Exportación
                 </h1>
@@ -125,6 +178,7 @@
                     Gestionamos sus procesos aduaneros de manera eficiente,
                     segura y profesional.
                 </p>
+
             </div>
 
             <!-- ACORDEÓN -->
@@ -151,8 +205,7 @@
                                     Nacionalización por todas las vías
 
                                     <div class="service-description">
-                                        Coordinación logística aérea,
-                                        marítima y terrestre.
+                                        Coordinación logística aérea, marítima y terrestre.
                                     </div>
 
                                 </div>
@@ -171,15 +224,31 @@
 
                             <div class="content-box">
 
-                                <h5 class="fw-bold mb-3">
-                                    Servicios de Calidad
-                                </h5>
+                                <div class="row align-items-center g-4">
 
-                                <p>
-                                    Brindamos soluciones completas de transporte
-                                    internacional para importaciones y exportaciones,
-                                    garantizando seguridad, seguimiento y respuesta rápida.
-                                </p>
+                                    <div class="col-md-5">
+
+                                        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
+                                            class="service-img shadow-sm"
+                                            alt="Importación">
+
+                                    </div>
+
+                                    <div class="col-md-7">
+
+                                        <h5 class="fw-bold mb-3">
+                                            Servicios de Calidad
+                                        </h5>
+
+                                        <p>
+                                            Brindamos soluciones completas de transporte
+                                            internacional para importaciones y exportaciones,
+                                            garantizando seguridad y seguimiento continuo.
+                                        </p>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
@@ -229,15 +298,30 @@
 
                             <div class="content-box">
 
-                                <h5 class="fw-bold mb-3">
-                                    Documentación y Gestión
-                                </h5>
+                                <div class="row align-items-center g-4">
 
-                                <p>
-                                    Nos encargamos de declaraciones aduaneras,
-                                    permisos especiales, clasificación arancelaria
-                                    y todo el proceso documental requerido.
-                                </p>
+                                    <div class="col-md-5">
+
+                                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
+                                            class="service-img shadow-sm"
+                                            alt="Documentación">
+
+                                    </div>
+
+                                    <div class="col-md-7">
+
+                                        <h5 class="fw-bold mb-3">
+                                            Documentación y Gestión
+                                        </h5>
+
+                                        <p>
+                                            Nos encargamos de declaraciones aduaneras,
+                                            permisos especiales y clasificación arancelaria.
+                                        </p>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
@@ -265,10 +349,10 @@
 
                                 <div class="text-start">
 
-                                    Custodia de mercancías.
+                                    Custodia de mercancías
 
                                     <div class="service-description">
-                                        Aseguro de carga de ser necesario.
+                                        Aseguramiento y monitoreo de carga.
                                     </div>
 
                                 </div>
@@ -287,15 +371,30 @@
 
                             <div class="content-box">
 
-                                <h5 class="fw-bold mb-3">
-                                    Seguridad y Control
-                                </h5>
+                                <div class="row align-items-center g-4">
 
-                                <p>
-                                    Ofrecemos espacios de almacenaje fiscal
-                                    con monitoreo y control logístico para
-                                    garantizar la protección de su carga.
-                                </p>
+                                    <div class="col-md-5">
+
+                                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop"
+                                            class="service-img shadow-sm"
+                                            alt="Carga">
+
+                                    </div>
+
+                                    <div class="col-md-7">
+
+                                        <h5 class="fw-bold mb-3">
+                                            Seguridad y Control
+                                        </h5>
+
+                                        <p>
+                                            Ofrecemos monitoreo y control logístico
+                                            para proteger su mercancía durante todo el proceso.
+                                        </p>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
@@ -326,7 +425,7 @@
                                     Custodia de Mercadería
 
                                     <div class="service-description">
-                                        Protección y monitoreo de mercancías.
+                                        Protección y seguimiento especializado.
                                     </div>
 
                                 </div>
@@ -345,15 +444,30 @@
 
                             <div class="content-box">
 
-                                <h5 class="fw-bold mb-3">
-                                    Seguridad Especializada
-                                </h5>
+                                <div class="row align-items-center g-4">
 
-                                <p>
-                                    Nuestro servicio de custodia protege su
-                                    mercancía durante el transporte y procesos
-                                    aduaneros con seguimiento continuo.
-                                </p>
+                                    <div class="col-md-5">
+
+                                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
+                                            class="service-img shadow-sm"
+                                            alt="Custodia">
+
+                                    </div>
+
+                                    <div class="col-md-7">
+
+                                        <h5 class="fw-bold mb-3">
+                                            Seguridad Especializada
+                                        </h5>
+
+                                        <p>
+                                            Nuestro servicio de custodia garantiza
+                                            protección y seguimiento continuo de mercancías.
+                                        </p>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
@@ -384,7 +498,7 @@
                                     Asesoría Logística
 
                                     <div class="service-description">
-                                        Consultoría personalizada en comercio exterior.
+                                        Consultoría en comercio exterior.
                                     </div>
 
                                 </div>
@@ -403,15 +517,30 @@
 
                             <div class="content-box">
 
-                                <h5 class="fw-bold mb-3">
-                                    Atención Personalizada
-                                </h5>
+                                <div class="row align-items-center g-4">
 
-                                <p>
-                                    Brindamos asesoría especializada para optimizar
-                                    procesos de importación, exportación y logística
-                                    internacional.
-                                </p>
+                                    <div class="col-md-5">
+
+                                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+                                            class="service-img shadow-sm"
+                                            alt="Asesoría">
+
+                                    </div>
+
+                                    <div class="col-md-7">
+
+                                        <h5 class="fw-bold mb-3">
+                                            Atención Personalizada
+                                        </h5>
+
+                                        <p>
+                                            Brindamos asesoría especializada para optimizar
+                                            procesos logísticos y comerciales internacionales.
+                                        </p>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
@@ -426,15 +555,28 @@
         </div>
 
     </section>
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4">
+
         <p class="mb-0">
-            © 2026 AGA S,A. - Todos los derechos reservados.
+            © 2026 AGA S.A. - Todos los derechos reservados.
         </p>
+
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 
 </body>
 </html>
