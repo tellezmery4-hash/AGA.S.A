@@ -8,20 +8,28 @@
     
 }
 
+/* =========================
+   TARJETAS
+========================= */
 
-.card {
+.card{
     transition: transform 0.3s ease;
 }
 
-.card:hover {
+.card:hover{
     transform: translateY(-10px);
 }
 
-section {
+/* =========================
+   SECCIONES
+========================= */
+
+section{
     scroll-margin-top: 80px;
 }
+
 /* =========================
-   NAVBAR TEXTO BLANCO
+   NAVBAR
 ========================= */
 
 .navbar-brand,
@@ -54,108 +62,27 @@ section {
 .nav-link:hover{
     transform: translateY(-1px);
 }
-/* =========================
-   RESPONSIVE PARA CELULARES
-========================= */
-
-@media (max-width: 768px) {
-
-    /* HERO */
-    .hero {
-        height: auto;
-        padding: 100px 20px;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    /* NAVBAR */
-    .navbar-brand {
-        font-size: 1rem;
-    }
-
-    .navbar-brand img {
-        height: 35px;
-    }
-
-    /* TARJETAS */
-    .card {
-        margin-bottom: 20px;
-    }
-
-    /* TITULOS */
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    /* FORMULARIOS */
-    .form-control {
-        font-size: 16px;
-    }
-
-    /* BOTONES */
-    .btn-lg {
-        width: 100%;
-    }
-
-    /* MAPA */
-    iframe {
-        min-height: 300px;
-    }
-
-    /* CONTACTO */
-    #contacto .col-md-4 {
-        margin-bottom: 25px;
-    }
-}
-
 
 /* =========================
-   TABLETS
+   TITULO HERO
 ========================= */
 
-@media (min-width: 769px) and (max-width: 1024px) {
-
-    .hero {
-        height: 70vh;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .card-body {
-        padding: 25px;
-    }
-}
 .hero-title{
     font-size: clamp(2rem, 5vw, 4rem);
 }
-.btn{
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-primary{
     border-radius: 10px;
 }
 
-.contacto-section{
-    background: linear-gradient(135deg, #003399, #0052cc);
-}
+/* =========================
+   CONTACTO
+========================= */
 
-.contacto-section .card{
-    border-radius: 15px;
-}
-
-.contacto-section h3{
-    font-size: 1.8rem;
-}
-
-.contacto-section p{
-    color: #444;
-}
 .contacto-section{
     background: linear-gradient(135deg, #003399, #0052cc);
     width: 100%;
@@ -165,6 +92,14 @@ section {
 
 .contacto-section h2{
     color: white;
+}
+
+.contacto-section h3{
+    font-size: 1.8rem;
+}
+
+.contacto-section p{
+    color: #444;
 }
 
 .contacto-section .card{
@@ -188,38 +123,75 @@ section {
     color: #003399;
     font-weight: bold;
 }
-  
+
 /* =========================
-   NAVBAR TEXTO BLANCO
+   RESPONSIVE CELULARES
 ========================= */
 
-.navbar-brand,
-.navbar-brand:hover,
-.navbar-brand:focus{
-    color: #ffffff !important;
+@media (max-width: 768px){
+
+    .hero{
+        min-height: auto;
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    .navbar-brand{
+        font-size: 1rem;
+    }
+
+    .navbar-brand img{
+        height: 35px;
+    }
+
+    .card{
+        margin-bottom: 20px;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    .form-control{
+        font-size: 16px;
+    }
+
+    .btn-lg{
+        width: 100%;
+    }
+
+    iframe{
+        min-height: 300px;
+    }
+
+    #contacto .col-md-4{
+        margin-bottom: 25px;
+    }
 }
 
-.navbar .nav-link,
-.navbar .nav-link:hover,
-.navbar .nav-link:focus,
-.navbar .nav-link.active{
-    color: #ffffff !important;
-    opacity: 1 !important;
-}
+/* =========================
+   TABLETS
+========================= */
 
-.navbar-toggler{
-    border-color: rgba(255,255,255,0.7);
-}
+@media (min-width: 769px) and (max-width: 1024px){
 
-.navbar-toggler:focus{
-    box-shadow: none;
-}
+    .hero{
+        min-height: 70vh;
+    }
 
-.nav-link{
-    font-weight: 500;
-    transition: 0.3s;
-}
+    .hero h1{
+        font-size: 2.5rem;
+    }
 
-.nav-link:hover{
-    transform: translateY(-1px);
+    .card-body{
+        padding: 25px;
+    }
 }
