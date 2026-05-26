@@ -9,33 +9,107 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="estilos.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        body{
+            background: #f4f6f9;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .section-title{
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #0d1b2a;
+        }
+
+        .accordion-item{
+            border: none;
+            border-radius: 18px !important;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+        }
+
+        .accordion-button{
+            background: white;
+            padding: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #0d1b2a;
+        }
+
+        .accordion-button:not(.collapsed){
+            background: #0d6efd;
+            color: white;
+        }
+
+        .accordion-button:focus{
+            box-shadow: none;
+        }
+
+        .accordion-body{
+            background: white;
+            padding: 30px;
+        }
+
+        .service-icon{
+            width: 55px;
+            height: 55px;
+            background: rgba(13,110,253,0.12);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 18px;
+            font-size: 1.6rem;
+            color: #0d6efd;
+        }
+
+        .accordion-button:not(.collapsed) .service-icon{
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .service-description{
+            font-size: 0.92rem;
+            font-weight: normal;
+            margin-top: 5px;
+            opacity: 0.8;
+        }
+
+        .content-box{
+            background: #f8f9fa;
+            border-left: 4px solid #0d6efd;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+    </style>
+
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-dark bg-primary shadow">
-        <div class="container">
-
-            <a class="navbar-brand fw-bold" href="index.html">
-                AGA S.A.
-            </a>
-
-        </div>
-    </nav>
-
-    <!-- ENCABEZADO -->
-    <section class="py-5 bg-light">
+    <section class="py-5">
 
         <div class="container">
 
-            <h1 class="text-center text-primary fw-bold mb-5">
-                Servicios de Importación y Exportación
-            </h1>
+            <div class="text-center mb-5">
+                <h1 class="section-title">
+                    Servicios de Importación y Exportación
+                </h1>
+
+                <p class="text-muted mt-3">
+                    Gestionamos sus procesos aduaneros de manera eficiente,
+                    segura y profesional.
+                </p>
+            </div>
 
             <!-- ACORDEÓN -->
-            <div class="accordion shadow" id="accordionImportacion">
+            <div class="accordion" id="accordionServicios">
 
                 <!-- ITEM 1 -->
                 <div class="accordion-item">
@@ -43,23 +117,53 @@
                     <h2 class="accordion-header">
 
                         <button class="accordion-button"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#item1">
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
 
-                            Trámites Aduaneros
+                            <div class="d-flex align-items-center">
+
+                                <div class="service-icon">
+                                    <i class="bi bi-globe-americas"></i>
+                                </div>
+
+                                <div class="text-start">
+
+                                    Transporte Internacional
+
+                                    <div class="service-description">
+                                        Coordinación logística aérea,
+                                        marítima y terrestre.
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </button>
 
                     </h2>
 
-                    <div id="item1"
-                         class="accordion-collapse collapse show"
-                         data-bs-parent="#accordionImportacion">
+                    <div id="collapseOne"
+                        class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionServicios">
 
                         <div class="accordion-body">
 
-                            Gestión completa de trámites aduaneros para importación y exportación de mercancías.
+                            <div class="content-box">
+
+                                <h5 class="fw-bold mb-3">
+                                    Servicio Profesional
+                                </h5>
+
+                                <p>
+                                    Brindamos soluciones completas de transporte
+                                    internacional para importaciones y exportaciones,
+                                    garantizando seguridad, seguimiento y cumplimiento
+                                    de tiempos.
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -73,23 +177,51 @@
                     <h2 class="accordion-header">
 
                         <button class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#item2">
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo">
 
-                            Asesoría Logística
+                            <div class="d-flex align-items-center">
+
+                                <div class="service-icon">
+                                    <i class="bi bi-file-earmark-text"></i>
+                                </div>
+
+                                <div class="text-start">
+
+                                    Trámites Aduanales
+
+                                    <div class="service-description">
+                                        Gestión documental y permisos aduaneros.
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </button>
 
                     </h2>
 
-                    <div id="item2"
-                         class="accordion-collapse collapse"
-                         data-bs-parent="#accordionImportacion">
+                    <div id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionServicios">
 
                         <div class="accordion-body">
 
-                            Asesoría especializada para optimizar procesos logísticos internacionales.
+                            <div class="content-box">
+
+                                <h5 class="fw-bold mb-3">
+                                    Documentación y Gestión
+                                </h5>
+
+                                <p>
+                                    Nos encargamos de declaraciones aduaneras,
+                                    permisos especiales, clasificación arancelaria
+                                    y todo el proceso documental requerido.
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -103,23 +235,51 @@
                     <h2 class="accordion-header">
 
                         <button class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#item3">
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree">
 
-                            Gestión Documental
+                            <div class="d-flex align-items-center">
+
+                                <div class="service-icon">
+                                    <i class="bi bi-box-seam"></i>
+                                </div>
+
+                                <div class="text-start">
+
+                                    Almacenaje Fiscal
+
+                                    <div class="service-description">
+                                        Custodia segura de mercancías.
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </button>
 
                     </h2>
 
-                    <div id="item3"
-                         class="accordion-collapse collapse"
-                         data-bs-parent="#accordionImportacion">
+                    <div id="collapseThree"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionServicios">
 
                         <div class="accordion-body">
 
-                            Preparación y revisión de documentos requeridos para procesos aduaneros.
+                            <div class="content-box">
+
+                                <h5 class="fw-bold mb-3">
+                                    Seguridad y Control
+                                </h5>
+
+                                <p>
+                                    Ofrecemos espacios de almacenaje fiscal
+                                    con monitoreo y control logístico para
+                                    garantizar la protección de su carga.
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -133,23 +293,51 @@
                     <h2 class="accordion-header">
 
                         <button class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#item4">
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour">
 
-                            Coordinación de Transporte
+                            <div class="d-flex align-items-center">
+
+                                <div class="service-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+
+                                <div class="text-start">
+
+                                    Custodia de Mercadería
+
+                                    <div class="service-description">
+                                        Protección y monitoreo de mercancías.
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </button>
 
                     </h2>
 
-                    <div id="item4"
-                         class="accordion-collapse collapse"
-                         data-bs-parent="#accordionImportacion">
+                    <div id="collapseFour"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionServicios">
 
                         <div class="accordion-body">
 
-                            Coordinación de transporte marítimo, terrestre y aéreo.
+                            <div class="content-box">
+
+                                <h5 class="fw-bold mb-3">
+                                    Seguridad Especializada
+                                </h5>
+
+                                <p>
+                                    Nuestro servicio de custodia protege su
+                                    mercancía durante el transporte y procesos
+                                    aduaneros con seguimiento continuo.
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -163,23 +351,51 @@
                     <h2 class="accordion-header">
 
                         <button class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#item5">
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive">
 
-                            Seguimiento de Carga
+                            <div class="d-flex align-items-center">
+
+                                <div class="service-icon">
+                                    <i class="bi bi-people"></i>
+                                </div>
+
+                                <div class="text-start">
+
+                                    Asesoría Logística
+
+                                    <div class="service-description">
+                                        Consultoría personalizada en comercio exterior.
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </button>
 
                     </h2>
 
-                    <div id="item5"
-                         class="accordion-collapse collapse"
-                         data-bs-parent="#accordionImportacion">
+                    <div id="collapseFive"
+                        class="accordion-collapse collapse"
+                        data-bs-parent="#accordionServicios">
 
                         <div class="accordion-body">
 
-                            Monitoreo y seguimiento continuo de mercancías nacionales e internacionales.
+                            <div class="content-box">
+
+                                <h5 class="fw-bold mb-3">
+                                    Atención Personalizada
+                                </h5>
+
+                                <p>
+                                    Brindamos asesoría especializada para optimizar
+                                    procesos de importación, exportación y logística
+                                    internacional.
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -193,16 +409,7 @@
 
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white text-center py-3">
-
-        <p class="mb-0">
-            © 2026 AGA S.A.
-        </p>
-
-    </footer>
-
-    <!-- Bootstrap -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
