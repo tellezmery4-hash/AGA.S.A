@@ -225,13 +225,12 @@ section{
         transform: translateY(0);
     }
 }
-.btn-inicio {
-    background-color: white;
-    color: #0d6efd;
-    border: 2px solid white;
+.inicio-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.btn-inicio:hover {
-    background-color: #f0f0f0;
-    color: #0d6efd;
+.inicio-link:hover {
+    color: #e0e0e0;
 }
