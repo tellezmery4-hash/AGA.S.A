@@ -225,3 +225,13 @@ section{
         transform: translateY(0);
     }
 }
+.btn-inicio {
+    background-color: white;
+    color: #0d6efd;
+    border: 2px solid white;
+}
+
+.btn-inicio:hover {
+    background-color: #f0f0f0;
+    color: #0d6efd;
+}
