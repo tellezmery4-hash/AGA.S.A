@@ -267,6 +267,10 @@ body {
     flex-direction: column;
 }
 
+.pagina-interna section {
+    flex: 1;
+}
+
 .pagina-interna footer {
     margin-top: auto;
 }
