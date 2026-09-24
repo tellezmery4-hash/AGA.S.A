@@ -234,14 +234,14 @@ section{
    BOTÓN A INICIO
 ========================= */
 
-.inicio-link {
-    color: white;
+.navbar .inicio-link {
+    color: #ffffff !important;
     text-decoration: none;
     font-weight: bold;
 }
 
-.inicio-link:hover {
-    color: #e0e0e0;
+.navbar .inicio-link:hover {
+    color: #ffffff !important;
 }
 
 /* =========================
