@@ -226,10 +226,32 @@ section{
     }
 }
 
+/* =========================
+   BOTÓN A INICIO
+========================= */
+
 .inicio-link {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* =========================
+  BODY FOOTER
+========================= */
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
 }
 
 .inicio-link:hover {
