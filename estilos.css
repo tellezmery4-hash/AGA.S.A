@@ -236,6 +236,10 @@ section{
     font-weight: bold;
 }
 
+.inicio-link:hover {
+    color: #e0e0e0;
+}
+
 /* =========================
   BODY FOOTER
 ========================= */
@@ -254,6 +258,4 @@ footer {
     margin-top: auto;
 }
 
-.inicio-link:hover {
-    color: #e0e0e0;
-}
+
