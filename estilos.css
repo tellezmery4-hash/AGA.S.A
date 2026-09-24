@@ -231,20 +231,6 @@ section{
 }
 
 /* =========================
-   BOTÓN A INICIO
-========================= */
-
-.navbar .inicio-link {
-    color: #ffffff !important;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar .inicio-link:hover {
-    color: #ffffff !important;
-}
-
-/* =========================
    BODY
 ========================= */
 
@@ -274,3 +260,18 @@ body {
 .pagina-interna footer {
     margin-top: auto;
 }
+
+/* =========================
+   ENLACE A INICIO
+========================= */
+
+.navbar .inicio-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .inicio-link:hover {
+    color: #ffffff !important;
+}
+
