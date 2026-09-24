@@ -45,16 +45,12 @@
 
         <!-- FORMULARIO -->
                             
-                                <form action="https://formspree.io/f/mojbknan" method="POST">
-
+                                <form id="form-aereo">
                                 <!-- Desactivar captcha -->
                                 <input type="hidden" name="_captcha" value="false">
 
                                 <!-- Asunto -->
                                 <input type="hidden" name="_subject" value="Solicitud de cotización aérea">
-
-                                <!-- Redirección -->
-                                 <input type="hidden" name="_next" value="https://tellezmery4-hash.github.io/AGA.S.A/gracias.html">
 
                                 <div class="mb-3">
                                     <label class="form-label">
@@ -126,8 +122,9 @@
 
                                 <div class="text-center">
                             <button type="submit"
-                                    class="btn btn-primary btn-lg">
-                                Enviar Solicitud
+                                class="btn btn-primary btn-lg"
+                                    data-fs-submit-btn>
+                                        Enviar Solicitud
                             </button>
                         </div>
                     </form>
@@ -146,6 +143,24 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    window.formspree =
+        window.formspree ||
+        function () {
+            (formspree.q = formspree.q || []).push(arguments);
+        };
 
+    formspree('initForm', {
+        formElement: '#form-aereo',
+        formId: 'mojbknan',
+
+        renderSuccess: function () {
+            window.location.href =
+                'https://tellezmery4-hash.github.io/AGA.S.A/gracias.html';
+        }
+    });
+</script>
+
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
